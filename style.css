@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  color: dimgray;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ========== Classic Aside Styling ========== */
+aside.card {
+  border-left: 4px solid royalblue;
+  background-color: #f8fafc;
+}
+
+/* ========== Top Navigation ========== */
+nav {
+  background: midnightblue;
+  padding: 14px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 22px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(255,255,255,0.18);
+}
+
+/* ========== HERO SECTION – 50/50 split ========== */
+.hero {
+  background: linear-gradient(135deg, #0c1929 0%, #1a2f4a 50%, #0f2744 100%);
+  color: white;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 380px;
+}
+
+/* Left side – image takes 50%, flush, no border, no radius, no shadow */
+.profile-pic {
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+  min-height: 380px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Right side – text takes the other 50% */
+.hero-text-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 48px;
+  text-align: left;
+}
+
+.hero-text-content h1 {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  background: linear-gradient(to right, #60a5fa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: #93c5fd;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== Main Container (Light) ========== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ========== Cards (general) ========== */
+.card {
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.card h1 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  background: linear-gradient(to right, royalblue, deepskyblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card h2 {
+  font-size: 22px;
+  color: royalblue;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid aliceblue;
+}
+
+.card h3 {
+  font-size: 18px;
+  color: midnightblue;
+  margin: 16px 0 8px;
+}
+
+.card p {
+  color: dimgray;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.card ul,
+.card ol {
+  margin: 12px 0 0 24px;
+  color: dimgray;
+}
+
+.card li {
+  margin-bottom: 8px;
+}
+
+.card strong {
+  color: royalblue;
+}
+
+/* ========== Card Grid ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 10px;
+}
+
+/* ========== Interests Page Colors ========== */
+.card-ict {
+  background: aliceblue;
+  border-top: 5px solid cornflowerblue;
+}
+
+.card-security {
+  background: honeydew;
+  border-top: 5px solid mediumseagreen;
+}
+
+.card-community {
+  background: seashell;
+  border-top: 5px solid sandybrown;
+}
+
+.card-research {
+  background: lavender;
+  border-top: 5px solid mediumpurple;
+}
+
+.card-personal {
+  background: azure;
+  border-top: 5px solid deepskyblue;
+}
+
+.card-sports {
+  background: lightyellow;
+  border-top: 5px solid gold;
+}
+
+/* ========== About Me Page Colors ========== */
+.card-about1 {
+  background: mistyrose;
+  border-top: 5px solid lightcoral;
+}
+
+.card-about2 {
+  background: mintcream;
+  border-top: 5px solid mediumaquamarine;
+}
+
+.card-about3 {
+  background: antiquewhite;
+  border-top: 5px solid burlywood;
+}
+
+.card-about4 {
+  background: thistle;
+  border-top: 5px solid plum;
+}
+
+.card-about5 {
+  background: powderblue;
+  border-top: 5px solid skyblue;
+}
+
+.card-about6 {
+  background: cornsilk;
+  border-top: 5px solid khaki;
+}
+
+/* Common card-grid improvements */
+.card-grid .card {
+  margin-bottom: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.card-grid .card h2 {
+  border-bottom: none;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.card-grid .card p {
+  margin-bottom: 0;
+}
+
+/* ========== Tables ========== */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: whitesmoke;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  background: midnightblue;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background: whitesmoke;
+}
+
+td {
+  color: dimgray;
+  font-size: 15px;
+}
+
+/* ========== Contact Form ========== */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: dimgray;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: royalblue;
+  box-shadow: 0 0 0 3px rgba(65,105,225,0.15);
+}
+
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+input[type="submit"],
+input[type="reset"],
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 1px;
+  font-size: 15px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"] {
+  background: midnightblue;
+  color: white;
+}
+
+input[type="submit"]:hover {
+  background: darkslateblue;
+}
+
+input[type="reset"],
+.btn-secondary {
+  background: gainsboro;
+  color: red;
+}
+
+input[type="reset"]:hover,
+.btn-secondary:hover {
+  background: lightgray;
+}
+
+/* ========== Footer ========== */
+footer {
+  text-align: center;
+  padding: 22px;
+  background: midnightblue;
+  color: white;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 700px) {
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+
+  .hero {
+    padding: 0;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .profile-pic {
+    width: 75%;
+    max-width: 75%;
+    min-height: 280px;
+    height: 280px;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+
+  .hero-text-content {
+    width: 100%;
+    text-align: center;
+    padding: 32px 20px;
+  }
+
+  .hero-text-content h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 24px 16px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
